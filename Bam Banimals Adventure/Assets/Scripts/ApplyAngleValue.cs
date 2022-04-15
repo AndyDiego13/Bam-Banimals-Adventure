@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Scene
+using UnityEngine.Scene;
 
 public class ApplyAngleValue : MonoBehaviour {
     //Start is called before the first frame update
