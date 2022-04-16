@@ -57,11 +57,6 @@ public class Game : MonoBehaviour
                   count = 0;  
                 }
             }
-        }
-        
+        }   
     }
-
-
-
-    
 }
