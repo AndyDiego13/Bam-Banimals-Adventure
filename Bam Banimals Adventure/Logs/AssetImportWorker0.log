@@ -170,3 +170,27 @@ Received Import Request.
   path: Packages/com.unity.ide.vscode/package.json
   artifactKey: Guid(ffc6271f08270b64ca0aae9c49235d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Packages/com.unity.ide.vscode/package.json using Guid(ffc6271f08270b64ca0aae9c49235d81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc2eb58b715695d862cee57d9b6e36af') in 0.006656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6152.546869 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(c0c5b61a5e8934028b832832f7e80448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(c0c5b61a5e8934028b832832f7e80448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c0167dbaf2c53f82097535bd3ceb0b1') in 0.016126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 112.568921 seconds.
+  path: Assets/Prefabs/GameObject.prefab
+  artifactKey: Guid(50c0c18e2bafe46958e8cff49b128ec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameObject.prefab using Guid(50c0c18e2bafe46958e8cff49b128ec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b4e0fd864f3b0bbce05762e2083a18') in 1.975870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1721.695392 seconds.
+  path: Assets/Scripts/Game
+  artifactKey: Guid(f8ed53f2bc8084162bf9bcaa9826b010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game using Guid(f8ed53f2bc8084162bf9bcaa9826b010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0877aa64e361d211d0c5848a56a42b') in 0.008113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.830438 seconds.
+  path: Assets/Scripts/Game/game.cs
+  artifactKey: Guid(49edc059601444fa2a2df18d4c2c7fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Game/game.cs using Guid(49edc059601444fa2a2df18d4c2c7fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c33ecb4736a4b992ebbdb527cb3960') in 0.538159 seconds 

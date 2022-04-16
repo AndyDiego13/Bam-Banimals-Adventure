@@ -14,10 +14,10 @@ public enum Direction
     isVertical  
 };
 
-public class circle : MonoBehaviour 
+public class Circle : MonoBehaviour 
 {
     MoveSpeed moveSpeed;
-    public Direction circleDt;
+    public direction circleDt;
     GameStartUI start;
     CircleMove inGame;
     Menu Stop;
@@ -46,6 +46,28 @@ public class circle : MonoBehaviour
     //radius
     [SerializeField][Range(0f,10f)] public float radius;
 
-    
+    public float runningTime = 0;
+    float x;
+    float y;
+    private Vector2 newPos = new Vector2();
+
+    float nowTime;
+    float prevTime;
+
+    void Start() 
+    {
+        circleDt = direction.isLeft;
+        moveSpeed = GameObject.Find("GameManager").GetComponent<MoveSpeed>();
+
+        Stop = GameObject.Find("Menu").GetComponent<Menu>();
+
+        start = GameObject.Find("Manager").GetComponent<GameStartUI>();
+
+        inGame = GameObject.Find("circle").GetComponent<CircleMove>();
+
+        LineCircle = GameObject.Find("LinerCircle");
+        purpleCircle = GameObject.Find("PurpleCircle");
+        
+    }
     
 }
