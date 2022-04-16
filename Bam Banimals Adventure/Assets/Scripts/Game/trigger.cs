@@ -74,7 +74,183 @@ public class trigger : MonoBehaviour {
             }
         }
 
+        if (other.gameObject.tag == "changeTop")
+        {
+            if (circle.LineCircle.transform.position == other.gameObject.transform.position)
+            {
+                Change = true;
+            }
+        }
 
+        if (other.gameObject.tag == "changeDown")
+        {
+            if (circle.LineCircle.transform.position == other.gameObject.transform.position)
+            {
+                Change = false;
+            }
+        }
 
+        if (other.gameObject.tag == "End")
+        {
+            circle.isFinish = true;
+        }
+
+        if (other.gameObject.tag == "CurveLd")
+        {
+            if (tiles.map[tileNum].tag == "Horizontal")
+            {
+                AroundCircle.circleDT = Direction.isLeft;
+            }
+            else if (tiles.map[tileNum].tag == "Vertical")
+            {
+                AroundCircle.circleDt = Direction.isUp;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLt")
+            {
+                AroundCircle.circleDt = Direction.isUp;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRd")
+            {
+                AroundCircle.circleDt = Direction.isLeft;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRt")
+            {
+                AroundCircle.circleDt = Direction.isLeft;
+            }
+        }
+        
+        if (other.gameObject.tag == "CurveLt")
+        {
+            if (tiles.map[tileNum].tag == "Horizontal")
+            {
+                AroundCircle.circleDt = Direction.isLeft;
+            }
+            else if (tiles.map[tileNum].tag == "Vertical")
+            {
+                AroundCircle.circleDt = Direction.isDown;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLd")
+            {
+                AroundCircle.circleDt = Direction.isDown;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRt")
+            {
+                AroundCircle.circleDt = Direction.isLeft;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRd")
+            {
+                AroundCircle.circleDt = Direction.isLeft;
+            }
+        }
+
+        if (other.gameObject.tag == "CurveRd")
+        {
+            if (tiles.map[tileNum].tag == "Horizontal")
+            {
+                AroundCircle.circleDt = Direction.isRight;
+            }
+            else if (tiles.map[tileNum].tag == "Vertical")
+            {
+                AroundCircle.circleDt = Direction.isUp;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLd")
+            {
+                AroundCircle.circleDt = Direction.isRight;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLt")
+            {
+                if (tiles.map[tileNum].transform.position.y < tiles.map[tileNum + 1].transform.position.y - 0.8f)
+                {
+                    AroundCircle.circleDt = Direction.isUp;
+                }
+                else
+                {
+                    AroundCircle.circleDt = Direction.isRight;
+                }
+            }
+            else if (tiles.map[tileNum].tag == "CurveRt")
+            {
+                AroundCircle.circleDt = Direction.isUp;
+            }
+        }
+
+        if (other.gameObject.tag == "CurveRt")
+        {
+            if (tiles.map[tileNum].tag == "Horizontal")
+            {
+                AroundCircle.circleDt = Direction.isRight;
+            }
+            else if (tiles.map[tileNum].tag == "Vertical")
+            {
+                AroundCircle.circleDt = Direction.isDown;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLd")
+            {
+                if (tiles.map[tileNum].transform.position.y > tiles.map[tileNum + 1].transform.position.y)
+                {
+                    AroundCircle.circleDT = Direction.isDown;
+                }
+                else
+                {
+                    AroundCircle.circleDT = Direction.isRight;
+                }
+            }
+            else if (tiles.map[tileNum].tag == "CurveLt")
+            {
+                AroundCircle.circleDT = Direction.isRight;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRd")
+            {
+                AroundCircle.circleDT = Direction.isDown;
+            }
+        }
+
+        if (other.gameObject.tag == "Vertical")
+        {
+            if (tiles.map[tileNum].tag == "CurveLd")
+            {
+                AroundCircle.circleDT = Direction.isDown;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLt")
+            {
+                AroundCircle.circleDT = Direction.isUp;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRd")
+            {
+                AroundCircle.circleDT = Direction.isDown;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRt")
+            {
+                AroundCircle.circleDT = Direction.isUp;
+            }
+        }
+
+        if (other.gameObject.tag == "Horizontal")
+        {
+            if (tiles.map[tileNum].tag == "CurveLd")
+            {
+                AroundCircle.circleDT = Direction.isRight;
+            }
+            else if (tiles.map[tileNum].tag == "CurveLt")
+            {
+                AroundCircle.circleDT = Direction.isRight;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRd")
+            {
+                AroundCircle.circleDT = Direction.isLeft;
+            }
+            else if (tiles.map[tileNum].tag == "CurveRt")
+            {
+                AroundCircle.circleDT = Direction.isLeft;
+            }
+        }
+
+        tile = other.gameObject;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) 
+    {
+        circle.isMove = false;
+        tile = null;
     }
 }
