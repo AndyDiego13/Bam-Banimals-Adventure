@@ -38,5 +38,43 @@ public class trigger : MonoBehaviour {
             }
         }
         
+        if (other.gameObject.tag == "UpSpeed")
+        {
+            if (circle.LineCircle.transform.position == other.gameObject.transform.position)
+            {
+                AroundCircle.speed = AroundCircle.speed * 2.0f;
+                other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+
+        if (other.gameObject.tag == "DownSpeed")
+        {
+            if (circle.LineCircle.transform.position == other.gameObject.transform.position)
+            {
+                AroundCircle.speed = AroundCircle.speed * 0.5f;
+                other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+
+        if (other.gameObject.tag == "DoubleDownSpeed")
+        {
+            if (circle.LineCircle.transform.position == other.gameObject.transform.position)
+            {
+                AroundCircle.speed = AroundCircle.speed * 0.25f;
+                other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+
+        if (other.gameObject.tag == "DoubleUpSpeed")
+        {
+            if (circle.LineCircle.transform.position == other.gameObject.transform.position)
+            {
+                AroundCircle.speed = AroundCircle.speed * 4.0f;
+                other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+
+
+
     }
 }
