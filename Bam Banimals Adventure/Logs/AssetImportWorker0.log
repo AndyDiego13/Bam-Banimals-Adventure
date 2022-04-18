@@ -194,3 +194,4 @@ Received Import Request.
   path: Assets/Scripts/Game/game.cs
   artifactKey: Guid(49edc059601444fa2a2df18d4c2c7fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/Game/game.cs using Guid(49edc059601444fa2a2df18d4c2c7fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c33ecb4736a4b992ebbdb527cb3960') in 0.538159 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
