@@ -104,6 +104,7 @@ public class Circle : MonoBehaviour
                         }
                         else if (LineCircle.OnTransformChildrenChangedAsObservable.position == pinkCircle.transform.position)
                         {
+                            // ! CHECK IF THE FIND IS PINK CIRCLE OR PURPLE CIRCLE 
                             CircleAround = GameObject.Find("PinkCircle").GetComponent<trigger>();
                         }
 
@@ -270,7 +271,8 @@ public class Circle : MonoBehaviour
         });  
     }
 
-    // changes the speed according with the button
+    // changes the speed when start the game and in the end slow down
+    // *** check if the values are correct in all of the songs
     public void SpeedUp()
     {
         if (start.isGameStart)
