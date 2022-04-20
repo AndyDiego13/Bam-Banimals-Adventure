@@ -6,7 +6,7 @@ using UniRx.Triggers;
 
 // ! QUITAR LA ANIMACION DE LOS CIRCULOS
 //create the constants for all the directions with Enumerations
-public enum Direction
+public enum direction
 {
     isUp,
     isDown,

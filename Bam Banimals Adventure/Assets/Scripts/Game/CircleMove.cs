@@ -11,7 +11,7 @@ public class CircleMove : MonoBehaviour
     GameStartUI start;
 
     public GameObject uncorrectPreFab;
-    public GameObject Circle;
+    public GameObject circle;
     public GameObject LineCircle;
     public GameObject purpleCircle;
     public GameObject pinkCircle;
@@ -45,7 +45,7 @@ public class CircleMove : MonoBehaviour
 
     public void Start() 
     {
-        CircleAround = GameObject.Find("circle").GetComponent<Circle>();
+        CircleAround = GameObject.Find("circle").GetComponent<circle>();
         CirclePoint = GameObject.Find("Point");
         start = GameObject.Find("Manager").GetComponent<GameStartUI>();
         tiles = GameObject.Find("Menu").GetComponent<MakeList>();

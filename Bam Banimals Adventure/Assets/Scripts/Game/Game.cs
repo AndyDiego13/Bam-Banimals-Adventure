@@ -8,7 +8,7 @@ public class Game : MonoBehaviour
     Scene scene;
     MakeList tiles;
     CircleMove inGame;
-    circle CircleAround;
+    Circle CircleAround;
     int listCount;
     int count;
     void Start() 
