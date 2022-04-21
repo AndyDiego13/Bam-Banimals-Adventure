@@ -1,0 +1,392 @@
+4873269600
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Game.cs
+18
+63
+circle
+0
+0
+4873269816
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Game.cs
+36
+20
+SoundManager
+0
+0
+4873270032
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Game.cs
+55
+19
+SoundManager
+0
+0
+4873270248
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/CircleMove.cs
+48
+63
+circle
+0
+0
+4873271112
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/CircleMove.cs
+100
+21
+moveDot
+0
+0
+4873271544
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/CircleMove.cs
+202
+46
+purpleLine
+0
+0
+4873271760
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Menu.cs
+53
+9
+SoundManager
+0
+0
+4873271976
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Menu.cs
+79
+13
+SoundManager
+0
+0
+4873272192
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Menu.cs
+86
+9
+SoundManager
+0
+0
+4873272408
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Menu.cs
+103
+21
+SoundManager
+0
+0
+4873272624
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Menu.cs
+110
+21
+SoundManager
+0
+0
+4873273272
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+102
+41
+Direction
+0
+0
+4873273488
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+106
+41
+Direction
+0
+0
+4873273704
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+110
+41
+Direction
+0
+0
+4873273920
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+114
+41
+Direction
+0
+0
+4873274136
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+118
+41
+Direction
+0
+0
+4873274352
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+126
+41
+Direction
+0
+0
+4873274568
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+130
+41
+Direction
+0
+0
+4873274784
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+134
+41
+Direction
+0
+0
+4873275000
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+138
+41
+Direction
+0
+0
+4873275216
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+142
+41
+Direction
+0
+0
+4873275432
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+150
+41
+Direction
+0
+0
+4873275648
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+154
+41
+Direction
+0
+0
+4873275864
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+158
+41
+Direction
+0
+0
+4873276080
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+164
+45
+Direction
+0
+0
+4873276296
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+168
+45
+Direction
+0
+0
+4873276512
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+173
+41
+Direction
+0
+0
+4873276728
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+181
+41
+Direction
+0
+0
+4873276944
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+185
+41
+Direction
+0
+0
+4873277376
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+191
+45
+Direction
+0
+0
+4873277808
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+195
+45
+Direction
+0
+0
+4873278240
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+200
+41
+Direction
+0
+0
+4873278672
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+204
+41
+Direction
+0
+0
+4873279104
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+212
+41
+Direction
+0
+0
+4873279536
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+216
+41
+Direction
+0
+0
+4873279968
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+220
+41
+Direction
+0
+0
+4873280400
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+224
+41
+Direction
+0
+0
+4873280832
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+232
+41
+Direction
+0
+0
+4873281264
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+236
+41
+Direction
+0
+0
+4873281696
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+240
+41
+Direction
+0
+0
+4873282128
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/trigger.cs
+244
+41
+Direction
+0
+0
+4873282992
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+160
+38
+Direction
+0
+0
+4873283208
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+164
+38
+Direction
+0
+0
+4873283424
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+168
+38
+Direction
+0
+0
+4873283640
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+172
+38
+Direction
+0
+0
+4873283856
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+183
+38
+Direction
+0
+0
+4873284072
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+187
+38
+Direction
+0
+0
+4873284288
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+191
+38
+Direction
+0
+0
+4873284504
+7136607203321344161
+/Users/andydiego13/Bam-Banimals-Adventure/Bam Banimals Adventure/Assets/Scripts/Game/Circle.cs
+195
+38
+Direction
+0
+0
