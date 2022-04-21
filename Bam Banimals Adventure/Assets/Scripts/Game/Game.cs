@@ -15,7 +15,7 @@ public class Game : MonoBehaviour
     {
         inGame = GameObject.Find("circle").GetComponent<CircleMove>();
 
-        CircleAround = GameObject.Find("circle").GetComponent<circle>();
+        CircleAround = GameObject.Find("circle").GetComponent<Circle>();
 
         tiles = GameObject.Find("Manager").GetComponent<MakeList>();
 

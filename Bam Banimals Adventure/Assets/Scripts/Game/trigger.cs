@@ -31,7 +31,7 @@ public class trigger : MonoBehaviour {
 
         for (int i = 0; i < tiles.map.Count; i++)
         {
-            if (circle.moveDot.transform.position == tiles.map[i].transform.position)
+            if (circle.moveLine.transform.position == tiles.map[i].transform.position)
             {
                 tileNum = 1;
                 break;
@@ -99,23 +99,23 @@ public class trigger : MonoBehaviour {
         {
             if (tiles.map[tileNum].tag == "Horizontal")
             {
-                AroundCircle.circleDT = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
             else if (tiles.map[tileNum].tag == "Vertical")
             {
-                AroundCircle.circleDt = Direction.isUp;
+                AroundCircle.circleDt = direction.isUp;
             }
             else if (tiles.map[tileNum].tag == "CurveLt")
             {
-                AroundCircle.circleDt = Direction.isUp;
+                AroundCircle.circleDt = direction.isUp;
             }
             else if (tiles.map[tileNum].tag == "CurveRd")
             {
-                AroundCircle.circleDt = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
             else if (tiles.map[tileNum].tag == "CurveRt")
             {
-                AroundCircle.circleDt = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
         }
         
@@ -123,23 +123,23 @@ public class trigger : MonoBehaviour {
         {
             if (tiles.map[tileNum].tag == "Horizontal")
             {
-                AroundCircle.circleDt = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
             else if (tiles.map[tileNum].tag == "Vertical")
             {
-                AroundCircle.circleDt = Direction.isDown;
+                AroundCircle.circleDt = direction.isDown;
             }
             else if (tiles.map[tileNum].tag == "CurveLd")
             {
-                AroundCircle.circleDt = Direction.isDown;
+                AroundCircle.circleDt = direction.isDown;
             }
             else if (tiles.map[tileNum].tag == "CurveRt")
             {
-                AroundCircle.circleDt = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
             else if (tiles.map[tileNum].tag == "CurveRd")
             {
-                AroundCircle.circleDt = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
         }
 
@@ -147,30 +147,30 @@ public class trigger : MonoBehaviour {
         {
             if (tiles.map[tileNum].tag == "Horizontal")
             {
-                AroundCircle.circleDt = Direction.isRight;
+                AroundCircle.circleDt = direction.isRight;
             }
             else if (tiles.map[tileNum].tag == "Vertical")
             {
-                AroundCircle.circleDt = Direction.isUp;
+                AroundCircle.circleDt = direction.isUp;
             }
             else if (tiles.map[tileNum].tag == "CurveLd")
             {
-                AroundCircle.circleDt = Direction.isRight;
+                AroundCircle.circleDt = direction.isRight;
             }
             else if (tiles.map[tileNum].tag == "CurveLt")
             {
                 if (tiles.map[tileNum].transform.position.y < tiles.map[tileNum + 1].transform.position.y - 0.8f)
                 {
-                    AroundCircle.circleDt = Direction.isUp;
+                    AroundCircle.circleDt = direction.isUp;
                 }
                 else
                 {
-                    AroundCircle.circleDt = Direction.isRight;
+                    AroundCircle.circleDt = direction.isRight;
                 }
             }
             else if (tiles.map[tileNum].tag == "CurveRt")
             {
-                AroundCircle.circleDt = Direction.isUp;
+                AroundCircle.circleDt = direction.isUp;
             }
         }
 
@@ -178,30 +178,30 @@ public class trigger : MonoBehaviour {
         {
             if (tiles.map[tileNum].tag == "Horizontal")
             {
-                AroundCircle.circleDt = Direction.isRight;
+                AroundCircle.circleDt = direction.isRight;
             }
             else if (tiles.map[tileNum].tag == "Vertical")
             {
-                AroundCircle.circleDt = Direction.isDown;
+                AroundCircle.circleDt = direction.isDown;
             }
             else if (tiles.map[tileNum].tag == "CurveLd")
             {
                 if (tiles.map[tileNum].transform.position.y > tiles.map[tileNum + 1].transform.position.y)
                 {
-                    AroundCircle.circleDT = Direction.isDown;
+                    AroundCircle.circleDt = direction.isDown;
                 }
                 else
                 {
-                    AroundCircle.circleDT = Direction.isRight;
+                    AroundCircle.circleDt = direction.isRight;
                 }
             }
             else if (tiles.map[tileNum].tag == "CurveLt")
             {
-                AroundCircle.circleDT = Direction.isRight;
+                AroundCircle.circleDt = direction.isRight;
             }
             else if (tiles.map[tileNum].tag == "CurveRd")
             {
-                AroundCircle.circleDT = Direction.isDown;
+                AroundCircle.circleDt = direction.isDown;
             }
         }
 
@@ -209,19 +209,19 @@ public class trigger : MonoBehaviour {
         {
             if (tiles.map[tileNum].tag == "CurveLd")
             {
-                AroundCircle.circleDT = Direction.isDown;
+                AroundCircle.circleDt = direction.isDown;
             }
             else if (tiles.map[tileNum].tag == "CurveLt")
             {
-                AroundCircle.circleDT = Direction.isUp;
+                AroundCircle.circleDt = direction.isUp;
             }
             else if (tiles.map[tileNum].tag == "CurveRd")
             {
-                AroundCircle.circleDT = Direction.isDown;
+                AroundCircle.circleDt = direction.isDown;
             }
             else if (tiles.map[tileNum].tag == "CurveRt")
             {
-                AroundCircle.circleDT = Direction.isUp;
+                AroundCircle.circleDt = direction.isUp;
             }
         }
 
@@ -229,19 +229,19 @@ public class trigger : MonoBehaviour {
         {
             if (tiles.map[tileNum].tag == "CurveLd")
             {
-                AroundCircle.circleDT = Direction.isRight;
+                AroundCircle.circleDt = direction.isRight;
             }
             else if (tiles.map[tileNum].tag == "CurveLt")
             {
-                AroundCircle.circleDT = Direction.isRight;
+                AroundCircle.circleDt = direction.isRight;
             }
             else if (tiles.map[tileNum].tag == "CurveRd")
             {
-                AroundCircle.circleDT = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
             else if (tiles.map[tileNum].tag == "CurveRt")
             {
-                AroundCircle.circleDT = Direction.isLeft;
+                AroundCircle.circleDt = direction.isLeft;
             }
         }
 

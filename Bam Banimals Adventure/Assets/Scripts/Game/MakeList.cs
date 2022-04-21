@@ -5,7 +5,7 @@ using UnityEngine;
 // Making lists using tags of the game objects of movements
 public class MakeList : MonoBehaviour 
 {
-    public int countL;
+    public int count;
     public List<GameObject> map;
     GameObject tiles;
 
@@ -18,11 +18,11 @@ public class MakeList : MonoBehaviour
         GameObject[] tag5 = GameObject.FindGameObjectsWithTag("CurveRd");
         GameObject[] tag6 = GameObject.FindGameObjectsWithTag("CurveRt");
 
-        countL = tag.Length + tag2.Length + tag3.Length + tag4.Length + tag5.Length + tag6.Length;
+        count = tag.Length + tag2.Length + tag3.Length + tag4.Length + tag5.Length + tag6.Length;
         //making new list using tiles
         map = new List<GameObject>();
 
-        for (int i = 0; i < countL; i++)
+        for (int i = 0; i < count; i++)
         {
             tiles = GameObject.Find(i.ToString());
             tiles.GetComponent<BoxCollider2D>().enabled = false;

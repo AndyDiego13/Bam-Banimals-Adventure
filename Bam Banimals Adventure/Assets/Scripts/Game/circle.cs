@@ -157,19 +157,19 @@ public class Circle : MonoBehaviour
                         {
                             switch (circleDt)
                             {
-                                case Direction.isDown:
+                                case direction.isDown:
                                     runningTime = 1.55f;
                                     CollisionRunningTime = 7.75f;
                                     break;
-                                case Direction.isUp:
+                                case direction.isUp:
                                     runningTime = 4.65f;
                                     CollisionRunningTime = 10.85f;
                                     break;
-                                case Direction.isLeft:
+                                case direction.isLeft:
                                     runningTime = 0f;
                                     CollisionRunningTime = 6.2f;
                                     break;
-                                case Direction.isRight:
+                                case direction.isRight:
                                     runningTime = 3.1f;
                                     CollisionRunningTime = 9.3f;
                                     break;
@@ -180,19 +180,19 @@ public class Circle : MonoBehaviour
                         {
                             switch (circleDt)
                             {
-                                case Direction.isDown:
+                                case direction.isDown:
                                     runningTime = 1.55f;
                                     CollisionRunningTime = 7.75f;
                                     break;
-                                case Direction.isUp:
+                                case direction.isUp:
                                     runningTime = 4.65f;
                                     CollisionRunningTime = 10.85f;
                                     break;
-                                case Direction.isLeft:
+                                case direction.isLeft:
                                     runningTime = 0f;
                                     CollisionRunningTime = 6.2f;
                                     break;
-                                case Direction.isRight:
+                                case direction.isRight:
                                     runningTime = 3.1f;
                                     CollisionRunningTime = 9.3f;
                                     break;

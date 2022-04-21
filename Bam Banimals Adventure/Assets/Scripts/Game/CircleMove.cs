@@ -11,7 +11,7 @@ public class CircleMove : MonoBehaviour
     GameStartUI start;
 
     public GameObject uncorrectPreFab;
-    public GameObject circle;
+    public GameObject CircleS;
     public GameObject LineCircle;
     public GameObject purpleCircle;
     public GameObject pinkCircle;
@@ -45,7 +45,7 @@ public class CircleMove : MonoBehaviour
 
     public void Start() 
     {
-        CircleAround = GameObject.Find("circle").GetComponent<circle>();
+        CircleAround = GameObject.Find("circle").GetComponent<Circle>();
         CirclePoint = GameObject.Find("Point");
         start = GameObject.Find("Manager").GetComponent<GameStartUI>();
         tiles = GameObject.Find("Menu").GetComponent<MakeList>();
@@ -53,7 +53,7 @@ public class CircleMove : MonoBehaviour
         LineCircle = GameObject.Find("LinerCircle");
         purpleCircle = GameObject.Find("PurpleCircle");
         pinkCircle = GameObject.Find("PinkCircle");
-        Circle = GameObject.Find("circle");
+        CircleS = GameObject.Find("circle");
         End = GameObject.Find("EndPoint");
         Point = GameObject.Find("PointCamera");
         effectList = new List<GameObject>();
@@ -97,7 +97,7 @@ public class CircleMove : MonoBehaviour
             {
                 if (isUpdate)
                 {
-                    moveDot = LineCircle;
+                    moveLine = LineCircle;
                     if (moveCount + 1 < tiles.map.Count)
                     {
                         if (!isFinish)
@@ -199,7 +199,7 @@ public class CircleMove : MonoBehaviour
     public void move()
     {
         //conditionals for movement between circles using pointers
-        if (LineCircle.transform.position == purpleLine.transform.position)
+        if (LineCircle.transform.position == purpleCircle.transform.position)
         {
             LineCircle.transform.position = LineCircle.transform.position;
             pinkCircle.transform.position = LineCircle.transform.position;
