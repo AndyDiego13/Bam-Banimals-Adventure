@@ -46,17 +46,22 @@ public class SoundManager : MonoBehaviour
         isStop = false;
     }
 
+    public void PlayLoopMusic(AudioClip musicClip)
+    {
+        musicSource.clip = musicClip;
+        musicSource.loop = true;
+        musicSource.volume = volumNum;
+        musicSource.Play();
+    }
     public void Stop()
     {
         musicSource.Stop();
         isStop = true;
     }
-
     public void SetMusicVolume(float volume)
     {
         volumNum = volume;
     }
-
     public void Pause()
     {
         musicSource.Pause();

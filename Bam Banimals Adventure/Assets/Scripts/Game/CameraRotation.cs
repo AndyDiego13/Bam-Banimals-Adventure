@@ -6,7 +6,7 @@ public class CameraRotation : MonoBehaviour
 {
     CircleMove circle;
     GameStartUI start;
-    GameObject tileAtribute;
+    GameObject tileAttribute;
     GameObject LineCircle;
     MakeList tiles;
 
@@ -40,9 +40,9 @@ public class CameraRotation : MonoBehaviour
 
         if (!circle.isFinish)
         {
-            if (tiles.map[countCr].transform.GetChildCount != 0)
+            if (tiles.map[countCr].transform.childCount != 0)
             {
-                tileAtribute = tiles.map[countCr].transform.GetChild(0).gameObject;
+                tileAttribute = tiles.map[countCr].transform.GetChild(0).gameObject;
             }
         }
         // RotateDown, RotateTop, RotateLeft, RotateRight
@@ -52,17 +52,17 @@ public class CameraRotation : MonoBehaviour
             {
                 if (tileAttribute.tag == "RotateDown")
                 {
-                    isRotateDown = true;
+                    isRotationDown = true;
                 }
-                if (tileAttribute.tag2 == "RotateTop")
+                if (tileAttribute.tag == "RotateTop")
                 {
                     isRotationUp = true;
                 }
-                if (tileAttribute.tag3 == "RotateLeft")
+                if (tileAttribute.tag == "RotateLeft")
                 {
                     isRotationLeft = true;
                 }
-                if (tileAttribute.tag4 == "RotateRight")
+                if (tileAttribute.tag == "RotateRight")
                 {
                     isRotationRight = true;
                 }

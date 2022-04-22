@@ -66,11 +66,11 @@ public class Circle : MonoBehaviour
         circleDt = direction.isLeft;
 
         // finds the GameObject and returns it
-        moveSpeed = GameObject.Find("GameManager").GetComponent<MoveSpeed>();
+        //moveSpeed = GameObject.Find("GameManager").GetComponent<MoveSpeed>();
 
-        Stop = GameObject.Find("Menu").GetComponent<Menu>();
+        //Stop = GameObject.Find("Menu").GetComponent<Menu>();
 
-        start = GameObject.Find("Manager").GetComponent<GameStartUI>();
+        //start = GameObject.Find("Manager").GetComponent<GameStartUI>();
 
         inGame = GameObject.Find("circle").GetComponent<CircleMove>();
 
@@ -153,7 +153,7 @@ public class Circle : MonoBehaviour
                             pinkCircle.transform.position = newPos;
                         }
 
-                        if (LineCircle.transform.position == pinkCircle.tranform.position && isChange)
+                        if (LineCircle.transform.position == pinkCircle.transform.position && isChange)
                         {
                             switch (circleDt)
                             {
@@ -246,7 +246,7 @@ public class Circle : MonoBehaviour
 
                         if (radius > 0.0f)
                         {
-                            if (LineCircle.transform.position == pinkCircle.tranform.position && isChange == false)
+                            if (LineCircle.transform.position == pinkCircle.transform.position && isChange == false)
                             {
                                 purpleCircle.transform.position = newPos;
                             }

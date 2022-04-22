@@ -66,13 +66,13 @@ public class CircleMove : MonoBehaviour
         moveCount = 0;
 
         string holderName = "Effect";
-        effectHolder = new GameObject(holderName).tranform;
+        effectHolder = new GameObject(holderName).transform;
         effectHolder.parent = transform;
 
         if (LineCircle.transform.position == pinkCircle.transform.position)
         {
             prevPosition = purpleCircle.transform.position;
-            distance = pinkCircle.tranform.position.x - purpleCircle.transform.position.x;
+            distance = pinkCircle.transform.position.x - purpleCircle.transform.position.x;
         }
         else if (LineCircle.transform.position == purpleCircle.transform.position)
         {
