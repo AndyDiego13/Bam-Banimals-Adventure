@@ -9,9 +9,27 @@ public class bolitasMover : MonoBehaviour
     public Transform placeOfEnd;
 
     public float rotationAmmount;
+    Vector3 vec;
+    Vector3 center;
+    float radius;
+    float angle;
 
-    private void Start() {
-        StartCoroutine("summonBalls");
+    private void Start() 
+    {
+        center = transform.position;
+        //vec = new Vector3(transform.position.x, transform.position.y);
+        radius = 2;
+
+    }
+    private void Update() 
+    {
+        vec.x = radius*Mathf.Cos(angle);
+        vec.y = radius *Mathf.Sin(angle);
+        transform.position = center + vec;
+        angle += rotationAmmount;
+    }
+
+        /*StartCoroutine("summonBalls");
     }
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
@@ -32,5 +50,5 @@ public class bolitasMover : MonoBehaviour
     private void summonBubble(){
         GameObject bubbleGO = Instantiate(bubble, placeToSpawn);
         bubbleGO.GetComponent<burbujaBehaibour>().StartExpedition(placeOfEnd, Time.time + 2);
-    }
+    }*/
 }

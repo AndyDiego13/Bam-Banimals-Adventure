@@ -23,7 +23,7 @@ public class burbujaBehaibour : MonoBehaviour
     {
         goTo = placeToGo;
 
-        timeOfArrival = (timeWhenThere * 10f)/2;
+        timeOfArrival = (timeWhenThere * 10f);
 
         distance = (timeWhenThere - Time.time) / (goTo.position.y - transform.position.y);
 
