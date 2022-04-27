@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.18.0",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "node-fetch": "^3.2.3",
     "package.json": "^2.0.1"

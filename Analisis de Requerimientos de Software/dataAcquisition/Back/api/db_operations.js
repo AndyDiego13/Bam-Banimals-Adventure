@@ -33,31 +33,31 @@ connection.connect(error=>
 )
 
 
-for(const n of names)
-{
-    let [Nickname] = n.split(" ")
-    const user_data = { Nickname: Nickname}
+// for(const n of names)
+// {
+//     let [Nickname] = n.split(" ")
+//     const user_data = { Nickname: Nickname}
 
-    connection.query('insert into USER set ?', user_data, (error, rows, fields)=> 
-    {
-        if(error) console.log(error)
-        console.log(`Added ${Nickname} successfully!`)
-    })
-}
+//     connection.query('insert into USER set ?', user_data, (error, rows, fields)=> 
+//     {
+//         if(error) console.log(error)
+//         console.log(`Added ${Nickname} successfully!`)
+//     })
+// }
 
 
-for(let i = 0; i<20; i++)
-{
-    const TimesPlayed = Math.floor(Math.random() * 100)+1
+// for(let i = 0; i<20; i++)
+// {
+//     const TimesPlayed = Math.floor(Math.random() * 100)+1
     
-    const id_LEVELS = {TimesPlayed: TimesPlayed}
+//     const id_LEVELS = {TimesPlayed: TimesPlayed}
 
-    connection.query('insert into LEVELS set ?', id_LEVELS, (error, rows, fields)=> 
-    {
-        if(error) console.log(error)
-        console.log(`Added attempt successfully!`)
-    })
-}
+//     connection.query('insert into LEVELS set ?', id_LEVELS, (error, rows, fields)=> 
+//     {
+//         if(error) console.log(error)
+//         console.log(`Added attempt successfully!`)
+//     })
+// }
 for(let i = 0; i<20; i++)
 {
     const Bambastic = Math.floor(Math.random() * 20)+1
@@ -68,27 +68,35 @@ for(let i = 0; i<20; i++)
     const user = connection.query('select id_USER from USER', (error, rows, fields)=> 
     {
         if(error) console.log(error)
+
+        let id_users = []
         for (const r of rows)
         {
-            console.log(Object.keys(r))
-            console.log(Object.values(r))
-            console.log(r['id_USER'])
+           id_users.push(r['id_USER'])
         }
-        // console.log(rows)
-        // console.log(fields)
-    })
-    const level = connection.query('select id_LEVELS from LEVELS', (error, rows, fields)=> 
-    {
-        if(error) console.log(error)
-        for (const r of rows)
+
+        const level = connection.query('select id_LEVELS from LEVELS', (error, rows, fields)=> 
         {
-            console.log(Object.keys(r))
-            console.log(Object.values(r))
-            console.log(r['id_LEVELS'])
-        }
-        // console.log(rows)
-        // console.log(fields)
+            if(error) console.log(error)
+            let id_levels = []
+            for (const r of rows)
+            {
+                id_levels.push(r['id_LEVELS'])
+            }
+
+            const id_USER_SCORE = {Bambastic: Bambastic, Noice: Noice, Keep_trying:Keep_trying, Oops:Oops, id_USER: id_users[Math.floor(Math.random() * id_users.length)], id_LEVELS:  id_levels[Math.floor(Math.random() * id_levels.length)]}
+
+
+            connection.query('insert into USER_SCORE set ?', id_USER_SCORE, (error, rows, fields)=> 
+            {
+                if(error) console.log(error)
+                console.log(`Added attempt successfully!`)
+            })
+            // console.log(rows)
+            // console.log(fields)
+        })
     })
+    
     // const user = connection.query('select id_USER * from USER')
     // const level = connection.query('select id_LEVELS * from LEVELS')
     // const id_LEVELS = Math.floor(Math.random() * 20)+1
@@ -99,14 +107,8 @@ for(let i = 0; i<20; i++)
     //     attempt_date: attempt_date,
     //     completed:  completed
     // }
-    const id_USER_SCORE = {Bambastic: Bambastic, Noice: Noice, Keep_trying:Keep_trying, Oops:Oops, id_USER:user, id_LEVELS: level}
 
-
-    connection.query('insert into USER_SCORE set ?', id_USER_SCORE, (error, rows, fields)=> 
-    {
-        if(error) console.log(error)
-        console.log(`Added attempt successfully!`)
-    })
+   
 }
 
 // for(const w of words)
