@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class BubbleButtons : MonoBehaviour
 {
-    public GameObject CirculoMorado;
+    public GameObject CirculoRosa;
     public UnityEvent pressKey;
 
 
