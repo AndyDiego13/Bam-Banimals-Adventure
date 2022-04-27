@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - burbuja
+  - ButtonPink
+  - bubbles
   layers:
   - Default
   - TransparentFX
