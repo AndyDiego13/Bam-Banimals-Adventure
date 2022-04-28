@@ -6,14 +6,14 @@ public class BamBubbles : MonoBehaviour
 {
     
     public GameObject CirculoRosa;
-    public AudioClip hitSource;
+    public AudioSource hitSource;
     bool pressKey = false;
 
     void Update() 
     {
         if (Input.GetKeyDown(KeyCode.K) && pressKey)
         {
-            GetComponent<AudioSource>().Play();
+           hitSource.Play();
             
         }
         
@@ -23,12 +23,12 @@ public class BamBubbles : MonoBehaviour
         pressKey = true;
     }
 
-    IEnumerator Start() 
+    /*IEnumerator Start() 
     {
         AudioSource audio = GetComponent<AudioSource>();
         audio.Play();
         yield return new WaitForSeconds(audio.clip.length);
         audio.clip = hitSource;
-        
-    }
+        //audio.Play();
+    }*/
 }
