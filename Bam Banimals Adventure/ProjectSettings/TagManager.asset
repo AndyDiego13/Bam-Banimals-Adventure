@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - burbuja
+  - ButtonPink
+  - bubbles
   layers:
   - Default
   - TransparentFX
@@ -38,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bkg
+    uniqueID: 2220696187
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sand
+    uniqueID: 2298248263
     locked: 0
