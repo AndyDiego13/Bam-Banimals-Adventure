@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExplotarBurbujas : MonoBehaviour
 {
+    // hacer un loop del movimiento de la burbuja principal
+
     bool pressKey = false;
 
     public GameObject CirculoRosa;
@@ -21,12 +23,12 @@ public class ExplotarBurbujas : MonoBehaviour
     } 
     */
     
-    private void OnCollisionEnter2D(Collision2D other) 
+    void OnCollisionEnter2D(Collision2D other) 
     {
         GameObject CirculoRosa = other.gameObject;
         if (other.gameObject.CompareTag("bubbles") && pressKey)
         {
-            bum();
+            pressKey = true;
         }
         
     }
