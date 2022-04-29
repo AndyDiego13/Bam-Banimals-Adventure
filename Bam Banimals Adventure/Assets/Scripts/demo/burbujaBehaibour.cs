@@ -10,7 +10,7 @@ public class burbujaBehaibour : MonoBehaviour
     public Transform endMarker;
 
     // Movement speed in units per second
-    public float speed = 1.0F;
+    public float speed = 0.1F;
     // * maybe i can used my speed formula with the bpm
 
     // Time when the movement started
@@ -20,6 +20,7 @@ public class burbujaBehaibour : MonoBehaviour
     //total distance between the markers
     private float journeyLength;
 
+
     void Start() 
     {
         //keep a note of the time the movement started
@@ -27,6 +28,9 @@ public class burbujaBehaibour : MonoBehaviour
 
         //calculate the journey length
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+
+
+
     }
 
     // Move to the target end position
