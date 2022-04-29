@@ -171,8 +171,9 @@ nav
 .despersonaje div
 {
     display: flex;
-    margin: 40px;
+    margin: 30px;
     padding: 10px;
+    align-items: center;
 
 }
 
@@ -249,9 +250,15 @@ nav
     margin: 50px;
     color: black;
 }
-.prub
+.boxdev
 {
     display: flex;
     justify-content: center;
     text-align: center; 
+}
+
+#mecanic
+{
+    width: 100px;
+    height: 100px;
 }
