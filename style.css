@@ -188,6 +188,7 @@ nav
 
 .despersonaje p
 {
+    font-size: 20px;
     color: black;
 }
 
@@ -205,4 +206,52 @@ nav
     justify-content: center;
     align-items: center;
     min-height: 8vh;
+}
+
+.box
+{
+    width: 100%;
+    height: 640px;
+}
+
+.mini
+{
+    display: flex;
+    margin: 50px;
+    background-color: rgba(86,174,255);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 93%;
+    height: 90%;
+
+}
+
+#nar
+{
+    background-color: rgba(255,165,0);  
+}
+
+.cardinf
+{
+    margin: 10px;
+    padding: 30px;
+    padding-top: 100px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.1);
+    box-shadow:5px 5px 30px rgba(0, 0, 0, 0.4);
+    height: 683px;
+    width: 400px;
+}
+.cardinf p
+{
+    font-size: 20px;
+    margin: 50px;
+    color: black;
+}
+.prub
+{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
 }
