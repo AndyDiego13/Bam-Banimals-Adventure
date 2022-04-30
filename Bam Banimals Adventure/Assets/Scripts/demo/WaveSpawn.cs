@@ -7,8 +7,11 @@ public class Wave
 {
     public string waveName;
     public int numOfBubbles;
+    public GameObject[] typeOfEnemies;
+    public float spawnInterval;
 }
 public class WaveSpawn : MonoBehaviour
 {
-    [SerializeField] Wave[] waves;
+    public Wave[] waves;
+    public Transform[] spawnPoints;
 }
