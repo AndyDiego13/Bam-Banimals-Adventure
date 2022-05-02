@@ -141,6 +141,49 @@ app.get('/api/USER_SCORE', (request, response)=>{
         console.log(error);
     }
 });
+app.post('/api/USER_SCORE', (request, response)=>{
+
+    try{
+        console.log(request.headers);
+
+        let connection = connectToDB();
+        connection.connect();
+
+        const query = connection.query('insert into USER_SCORE set ?' , request.body ,(error, results, fields)=>{
+            if(error) 
+                console.log(error);
+            else
+                response.json({'message': "Data inserted correctly."})
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
+app.put('/api/USER_SCORE', (request, response)=>{
+    try{
+        let connection = connectToDB();
+        connection.connect();
+
+        const query = connection.query('update USER_SCORE set Bambastic = ?, Noice = ?, Keep_trying = ?, Oops = ?, id_USER = ?, id_LEVELS = ? where id_USER_SCORE = ?', [request.body['Bambastic'],request.body['Noice'],request.body['Keep_trying'],request.body['Oops'], request.body['id_USER'],request.body['id_LEVELS'],request.body['id_USER_SCORE']] ,(error, results, fields)=>{
+            if(error) 
+                console.log(error);
+            else
+                response.json({'message': "Data updated correctly."})
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
 
 app.listen(port, ()=>
 {
