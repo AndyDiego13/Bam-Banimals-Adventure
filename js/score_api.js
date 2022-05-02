@@ -31,6 +31,95 @@ app.get('/', (request,response)=>{
     })
 });
 
+app.get('/api/users', (request, response)=>{
+    let connection = connectToDB();
+
+    try{
+
+        connection.connect();
+
+        connection.query('select * from USER', (error, results, fields)=>{
+            if(error) console.log(error);
+            console.log(JSON.stringify(results));
+            response.json(results);
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
+
+app.post('/api/users', (request, response)=>{
+
+    try{
+        console.log(request.headers);
+
+        let connection = connectToDB();
+        connection.connect();
+
+        const query = connection.query('insert into USER set ?', request.body ,(error, results, fields)=>{
+            if(error) 
+                console.log(error);
+            else
+                response.json({'message': "Data inserted correctly."})
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
+
+app.put('/api/users', (request, response)=>{
+    try{
+        let connection = connectToDB();
+        connection.connect();
+
+        const query = connection.query('update USER set Nickname = ? where id_USER= ?', [request.body['Nickname'], request.body['id_USER']] ,(error, results, fields)=>{
+            if(error) 
+                console.log(error);
+            else
+                response.json({'message': "Data updated correctly."})
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
+
+app.get('/api/LEVELS', (request, response)=>{
+    let connection = connectToDB();
+
+    try{
+
+        connection.connect();
+
+        connection.query('select * from LEVELS', (error, results, fields)=>{
+            if(error) console.log(error);
+            console.log(JSON.stringify(results));
+            response.json(results);
+        });
+
+        connection.end();
+    }
+    catch(error)
+    {
+        response.json(error);
+        console.log(error);
+    }
+});
+
 app.get('/api/USER_SCORE', (request, response)=>{
     let connection = connectToDB();
 
