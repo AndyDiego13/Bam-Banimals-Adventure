@@ -15,7 +15,7 @@ public class WaveSpawn : MonoBehaviour
     //all the waves we ever gonna have
     public Wave[] waves;
     public Transform[] spawnPoints;
-
+    public Transform endPoint;
     private Wave currentWave;
     // check in what wave are you current in
     private int currentWaveNumber;
