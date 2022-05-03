@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.Events;
 using UnityEngine.UI;
+//using UnityEngine.Events;
+
 
 public class ExplotarBurbujas : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class ExplotarBurbujas : MonoBehaviour
         
     } 
     */
-    //[SerializeField] int points;
+    [SerializeField] int points;
     [SerializeField] Text pointsText;
     //[SerializeField] Text gameOver;
     
@@ -45,13 +46,13 @@ public class ExplotarBurbujas : MonoBehaviour
             pressKey = true;
             Debug.Log("perfect");
         }
-        else if (other.collider.GetType() == typeof(CircleCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
+        else if (other.collider.GetType() == typeof(PolygonCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
         {
             pressKey = true;
             Debug.Log("good");
 
         }
-        else if (other.collider.GetType() == typeof(PolygonCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
+        else if (other.collider.GetType() == typeof(EdgeCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
         {
             pressKey = true;
             Debug.Log("bad");
@@ -67,6 +68,7 @@ public class ExplotarBurbujas : MonoBehaviour
 
     void Update() 
     {
+
         if (Input.GetKey(KeyCode.K) && pressKey)
         {
             bum();
@@ -82,6 +84,21 @@ public class ExplotarBurbujas : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) 
     {
         pressKey = true;
+        if (other.gameObject.CompareTag("perfect") && pressKey)
+        {
+            points += 3;
+            pointsText.text = "Score: " + points;
+        }
+        if (other.gameObject.CompareTag("good") && pressKey)
+        {
+            points += 2;
+            pointsText.text = "Score: " + points;
+        }
+        if (other.gameObject.CompareTag("bad") && pressKey)
+        {
+            points += 1;
+            pointsText.text = "Score: " + points;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) 
