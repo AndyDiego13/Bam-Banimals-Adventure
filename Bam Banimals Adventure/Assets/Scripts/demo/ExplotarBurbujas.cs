@@ -27,7 +27,7 @@ public class ExplotarBurbujas : MonoBehaviour
     } 
     */
     //[SerializeField] int points;
-    //[SerializeField] Text pointsText;
+    [SerializeField] Text pointsText;
     //[SerializeField] Text gameOver;
     
     void OnCollisionEnter2D(Collision2D other) 
