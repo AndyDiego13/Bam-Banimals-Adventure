@@ -223,7 +223,6 @@ nav
     padding: 30px;
     background-color: rgba(86,174,255);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     overflow-y: scroll;
     width: 93%;
