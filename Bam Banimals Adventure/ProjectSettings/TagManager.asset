@@ -8,6 +8,9 @@ TagManager:
   - ButtonPink
   - bubbles
   - endpoint
+  - perfect
+  - good
+  - bad
   layers:
   - Default
   - TransparentFX
