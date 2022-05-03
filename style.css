@@ -242,21 +242,26 @@ nav
 
 .cardinf
 {
-    margin: 10px;
-    padding: 30px;
-    padding-top: 100px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 50px;
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.1);
     box-shadow:5px 5px 30px rgba(0, 0, 0, 0.4);
-    height: 683px;
-    width: 400px;
+    /* height: 420px;
+    width: 400px; */
 }
+
 .cardinf p
 {
     font-size: 20px;
     margin: 50px;
     color: black;
+    padding: 10px;
+    background-color: rgba(127,115,227,0.5);
+    border-radius: 10px;
 }
+
 .boxdev
 {
     display: flex;
@@ -268,4 +273,12 @@ nav
 {
     width: 100px;
     height: 100px;
+}
+
+.page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
