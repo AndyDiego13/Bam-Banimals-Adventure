@@ -12,6 +12,7 @@ public class ExplotarBurbujas : MonoBehaviour
     bool pressKey = false;
 
     public GameObject CirculoRosa;
+    public GameObject CirculoRosaGood;
     public GameObject bubbles;
 
     //public Action<Collision2D> OnCollisionEnter2D_Action;
@@ -27,14 +28,14 @@ public class ExplotarBurbujas : MonoBehaviour
         
     } 
     */
-    [SerializeField] int points;
-    [SerializeField] Text pointsText;
+    //[SerializeField] int points;
+    //[SerializeField] Text pointsText;
     //[SerializeField] Text gameOver;
     
     void OnCollisionEnter2D(Collision2D other) 
     {   
-        
         GameObject CirculoRosa = other.gameObject;
+        //Collider2D collider = other.collider;
         /*
         if (other.gameObject.CompareTag("bubbles") && pressKey)
         {
@@ -43,26 +44,24 @@ public class ExplotarBurbujas : MonoBehaviour
         */
         if (other.collider.GetType() == typeof(BoxCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
         {
+
             pressKey = true;
+            KeepScore.Score += 3;
             Debug.Log("perfect");
+
         }
         else if (other.collider.GetType() == typeof(PolygonCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
         {
             pressKey = true;
+            KeepScore.Score += 2;
             Debug.Log("good");
-
         }
-        else if (other.collider.GetType() == typeof(EdgeCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
+        else if (other.collider.GetType() == typeof(CircleCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
         {
             pressKey = true;
+            KeepScore.Score += 1;
             Debug.Log("bad");
         }
-        else
-        {
-            pressKey = false;
-            Debug.Log("miss");
-        }
-        
     }
     
 
@@ -84,6 +83,7 @@ public class ExplotarBurbujas : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) 
     {
         pressKey = true;
+        /*
         if (other.gameObject.CompareTag("perfect") && pressKey)
         {
             points += 3;
@@ -99,12 +99,13 @@ public class ExplotarBurbujas : MonoBehaviour
             points += 1;
             pointsText.text = "Score: " + points;
         }
+        */
     }
+
 
     void OnTriggerExit2D(Collider2D other) 
     {
         pressKey = false;   
     }
-    
 
 }
