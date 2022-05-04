@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class KeepScore : MonoBehaviour
 {
-    public Text scoreText;
-    int score;
+    public static int Score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +19,7 @@ public class KeepScore : MonoBehaviour
     }
     void OnGUI() 
     {
-        GUI.Box(new Rect(100, 100, 100, 100), "Score");
+        GUI.Box(new Rect(200, 200, 50, 50), Score.ToString());
         
     }
 }
