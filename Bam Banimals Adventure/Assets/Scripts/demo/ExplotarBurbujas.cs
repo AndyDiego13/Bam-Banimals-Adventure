@@ -12,65 +12,44 @@ public class ExplotarBurbujas : MonoBehaviour
     bool pressKey = false;
 
     public GameObject CirculoRosa;
-    public GameObject CirculoRosaGood;
-    public GameObject bubbles;
 
-    //public Action<Collision2D> OnCollisionEnter2D_Action;
-    /*
-    void OnCollisionStay2D(Collision2D other) 
+    void Start() 
     {
-        //GameObject CirculoRosa = other.gameObject;
-        GameObject bubbles = other.gameObject;
-        if(other.gameObject.CompareTag("bubbles") && Input.GetKey(KeyCode.K))
-        {
-            Destroy(other.gameObject);
-        }
+        CirculoRosa = GameObject.FindGameObjectWithTag("ButtonPink");
         
-    } 
-    */
-    //[SerializeField] int points;
-    //[SerializeField] Text pointsText;
-    //[SerializeField] Text gameOver;
-    
-    void OnCollisionEnter2D(Collision2D other) 
-    {   
-        GameObject CirculoRosa = other.gameObject;
-        //Collider2D collider = other.collider;
-        /*
-        if (other.gameObject.CompareTag("bubbles") && pressKey)
-        {
-            pressKey = true;
-        }
-        */
-        if (other.collider.GetType() == typeof(BoxCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
-        {
-
-            pressKey = true;
-            KeepScore.Score += 3;
-            Debug.Log("perfect");
-
-        }
-        else if (other.collider.GetType() == typeof(PolygonCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
-        {
-            pressKey = true;
-            KeepScore.Score += 2;
-            Debug.Log("good");
-        }
-        else if (other.collider.GetType() == typeof(CircleCollider2D) && other.gameObject.CompareTag("bubbles") && pressKey)
-        {
-            pressKey = true;
-            KeepScore.Score += 1;
-            Debug.Log("bad");
-        }
     }
     
 
     void Update() 
     {
 
-        if (Input.GetKey(KeyCode.K) && pressKey)
+        if (Input.GetKeyDown(KeyCode.K) && pressKey)
         {
-            bum();
+            float dist = Vector3.Distance(CirculoRosa.transform.position, transform.position);
+            print(dist);
+            if (dist <= 0.909983)
+            {
+                KeepScore.Score += 3;
+                Debug.Log("perfect");
+                bum();
+                
+            }
+            else if(dist <= 1.819966)
+            {
+                KeepScore.Score += 2;
+                Debug.Log("good");
+                bum();
+            }
+            else if(dist <= 2.729949)
+            {
+                KeepScore.Score += 1;
+                Debug.Log("bad");
+                bum();
+            }
+            else if(dist > 2.8)
+            {
+                Debug.Log("miss");
+            }
         }
         
     }
@@ -82,30 +61,19 @@ public class ExplotarBurbujas : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        pressKey = true;
-        /*
-        if (other.gameObject.CompareTag("perfect") && pressKey)
+        if (other.gameObject.tag == "ButtonPink")
         {
-            points += 3;
-            pointsText.text = "Score: " + points;
+            pressKey = true;
         }
-        if (other.gameObject.CompareTag("good") && pressKey)
-        {
-            points += 2;
-            pointsText.text = "Score: " + points;
-        }
-        if (other.gameObject.CompareTag("bad") && pressKey)
-        {
-            points += 1;
-            pointsText.text = "Score: " + points;
-        }
-        */
+        
     }
-
 
     void OnTriggerExit2D(Collider2D other) 
     {
-        pressKey = false;   
+        if (other.gameObject.tag == "ButtonPink")
+        {
+            pressKey = false;
+        }
     }
 
 }

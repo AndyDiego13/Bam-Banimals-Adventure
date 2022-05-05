@@ -33,26 +33,13 @@ public class bolitasMover : MonoBehaviour
         angle += rotationAmmount;
     }
 
-        /*StartCoroutine("summonBalls");
-    }
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
-    void Update()
+    void OnDrawGizmosSelected()
     {
-        transform.localEulerAngles = new Vector3(0, 0, transform.rotation.eulerAngles.z + (Time.deltaTime * rotationAmmount));
-    }
+        if (true) {
+            Gizmos.DrawWireSphere(transform.position, 0.909983f);
+            Gizmos.DrawWireSphere(transform.position, 1.819966f);
+            Gizmos.DrawWireSphere(transform.position, 2.729949f);
 
-    IEnumerator summonBalls(){
-        while (true){
-            yield return new WaitForSeconds(2f);
-            Debug.Log("summoning bubble");
-            summonBubble();
         }
     }
-
-    private void summonBubble(){
-        GameObject bubbleGO = Instantiate(bubble, placeToSpawn);
-        bubbleGO.GetComponent<burbujaBehaibour>().StartExpedition(placeOfEnd, Time.time + 2);
-    }*/
 }

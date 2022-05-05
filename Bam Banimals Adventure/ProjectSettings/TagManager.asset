@@ -11,6 +11,7 @@ TagManager:
   - perfect
   - good
   - bad
+  - startpoint
   layers:
   - Default
   - TransparentFX

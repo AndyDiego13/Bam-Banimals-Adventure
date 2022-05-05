@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// ! puedo definir un tope de burbujas a crear
 public class burbujaBehaibour : MonoBehaviour
 {
     //public float timeOfArrival;
@@ -29,10 +30,11 @@ public class burbujaBehaibour : MonoBehaviour
         //GameObject[] endMarkers = GameObject.FindGameObjectstWithTag("endpoint");//encontrar el objecto y el script del objecto
  
 
+
+        startMarker = GameObject.FindWithTag("startpoint").transform;
+        endMarker = GameObject.FindGameObjectWithTag("endpoint").transform;
         //calculate the journey length
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
-
-
 
     }
 
