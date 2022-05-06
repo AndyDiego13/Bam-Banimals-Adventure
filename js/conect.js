@@ -13,6 +13,41 @@ connection.connect(error=>
         if (error) console.log(error)
         console.log('Connected to mysql!')
     })
+
+    connection.query('select * from USER', (error, rows, fields)=> 
+    {
+        if(error) console.log(error)
+        for (const r of rows)
+        {
+            console.log(Object.keys(r))
+            console.log(Object.values(r))
+        }
+        console.log(rows)
+        // console.log(fields)
+    })
+
+connection.query('select * from LEVELS', (error, rows, fields)=> 
+{
+    if(error) console.log(error)
+    for (const r of rows)
+    {
+        console.log(Object.keys(r))
+        console.log(Object.values(r))
+    }
+    console.log(rows)
+    // console.log(fields)
+})
+connection.query('select * from USER_SCORE', (error, rows, fields)=> 
+{
+    if(error) console.log(error)
+    for (const r of rows)
+    {
+        console.log(Object.keys(r))
+        console.log(Object.values(r))
+    }
+    console.log(rows)
+    // console.log(fields)
+})
 connection.end(error=>
     {
         if(error) console.log(error)
